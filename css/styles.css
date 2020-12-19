@@ -23,6 +23,7 @@ Font nav, mail, phone, hero, button-hero, h2, h3, p, address, email+phone-footer
   --activ-button-color: #2196f3;
   --title-text-color: #212121;
   --text-hero-color: #ffffff;
+  --border-example-color: #eeeeee;
 }
 
 body {
@@ -349,7 +350,29 @@ footer {
   border: 1px solid #ececec;
 }
 
+.portfolio {
+  margin-bottom: 0;
+}
+
+.project-list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.project-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .button-portfolio {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+
+  min-width: 73px;
+  min-height: 38px;
+
   background-color: #f5f4fa;
   color: var(--title-text-color);
   font-family: Roboto, sans-serif;
@@ -364,9 +387,43 @@ footer {
 .button-portfolio:focus {
   background-color: var(--activ-button-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.example-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.example-list > .example {
+  width: 370px;
+  margin: 15px;
+}
+
+.example {
+  display: block;
+}
+
+.example-list img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.example-content {
+  padding: 20px 24px;
+  background-color: var(--text-hero-color);
+  border-right: 1px solid var(--border-example-color);
+  border-bottom: 1px solid var(--border-example-color);
+  border-left: 1px solid var(--border-example-color);
 }
 
 .example-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
