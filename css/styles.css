@@ -31,16 +31,37 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
 a {
   text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 header {
   background-color: #ffffff;
 }
 
-li {
+.list {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -57,6 +78,16 @@ li {
 }
 
 /* header */
+.container.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 .button.accent {
   color: var(--activ-button-color);
 }
@@ -69,10 +100,33 @@ li {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  margin-right: 93px;
 }
 
 .logo-text {
   color: var(--activ-button-color);
+}
+
+.site-nav,
+.contact-main {
+  display: flex;
+}
+
+.site-nav .item:not(:last-child),
+.contact-main .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-main {
+  margin-left: auto;
+}
+
+.site-nav .button,
+.contact-main .contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .button {
@@ -104,12 +158,16 @@ li {
 /* HERO */
 
 .hero {
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: #2f303a;
   color: var(--text-hero-color);
   text-align: center;
 }
 
 .hero-text {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -118,20 +176,45 @@ li {
 }
 
 .hero-button {
+  display: inline-block;
+  padding: 10px 32px;
+
+  min-width: 200px;
+  min-height: 50px;
+
   background-color: var(--activ-button-color);
   color: var(--text-hero-color);
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* VALUES */
+.values-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.values-list .item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+
+.values-list .item:nth-child(4) {
+  margin-right: 0;
+}
 
 .values-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -199,6 +282,10 @@ footer {
 }
 
 /* Portfolio */
+
+.header-border {
+  border: 1px solid #ececec;
+}
 
 .button-portfolio {
   background-color: #f5f4fa;
