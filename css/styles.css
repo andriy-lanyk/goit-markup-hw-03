@@ -197,6 +197,7 @@ section {
 }
 
 /* VALUES */
+
 .values-list {
   display: flex;
   justify-content: space-between;
@@ -228,10 +229,33 @@ section {
   line-height: 1.71;
 }
 
+/* WORK */
+.work {
+  padding-top: 0px;
+}
+
+.work-list,
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work-list .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+}
+
+.work-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
 /* TEAM */
 
 .work-title,
 .team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -243,8 +267,34 @@ section {
   background-color: #f5f4fa;
 }
 
+.team-list .item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  padding-bottom: 30px;
+
+  background: var(--text-hero-color);
+
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-list .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team-list img {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .employee {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--title-text-color);
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -260,7 +310,14 @@ section {
 /* footer */
 
 footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.footer > .logo {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .logo-footer {
@@ -268,10 +325,15 @@ footer {
 }
 
 .address {
+  margin-bottom: 9px;
   color: #ffffff;
   font-style: inherit;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.contacts-footer .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contact-footer {
